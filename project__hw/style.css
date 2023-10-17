@@ -1,7 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Gilroy-Medium;
+}
+
+body {
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
 }
 
 a {
@@ -14,10 +22,12 @@ a {
 
 .header {
     padding-top: 45px;
-}
-
-.header__nav {
-    padding-top: 6px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-start;
 }
 
 .nav__link {
@@ -26,9 +36,10 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-right: 14px;
 }
 
-.home__nav__link {
+.nav__link:hover {
     color: #F25822;
     font-size: 14px;
     font-style: normal;
@@ -38,15 +49,22 @@ a {
 
 .top__content {
     margin-top: 84px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .top__info {
     padding-bottom: 162px;
+    width: 522px;
 }
 
 .title {
     margin-bottom: 17px;
     color: #000;
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 60px;
     font-style: normal;
     font-weight: 400;
@@ -69,6 +87,7 @@ a {
     width: 140px;
     height: 50px;
     color: #FFF;
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -86,6 +105,7 @@ a {
     background: none;
     border: 0;
     color: #AAA;
+    font-family: 'Gilroy-Bold', sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -94,4 +114,10 @@ a {
 
 .logos {
     padding-top: 97px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
