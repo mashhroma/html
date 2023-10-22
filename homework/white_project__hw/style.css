@@ -27,7 +27,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .nav__link {
@@ -71,7 +71,7 @@ a {
     line-height: normal;
 }
 
-.text {
+.top__text {
     color: #888;
     font-size: 20px;
     font-style: normal;
@@ -79,11 +79,17 @@ a {
     line-height: normal;
 }
 
-.top__buttons {
-    margin-top: 37px;
+.text {
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
 }
 
 .start__button {
+    margin-top: 37px;
     width: 140px;
     height: 50px;
     color: #FFF;
@@ -120,4 +126,104 @@ a {
     align-content: center;
     justify-content: space-between;
     align-items: center;
+}
+
+.subtitle {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.about {
+    background: #FAFAFA;
+    margin-top: 94px;
+    display: flex;
+}
+
+.about__content {
+    padding-top: 127px;
+    width: 515px;
+}
+
+.macbook {
+    width: 800px;
+    height: 600px;
+    flex-shrink: 0;
+}
+
+.services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subject {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.more {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.services__left {
+    width: 370px;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+}
+
+.services__middle {
+    width: 370px;
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+}
+
+.services__right {
+    width: 370px;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+}
+
+.advantages {
+    padding-top: 92px;
+    padding-bottom: 100px;
+    background: #FAFAFA;
+    text-align: center;
+
+}
+
+.advantages__content {
+    margin-top: 92px;
+    display: flex;
+    justify-content: space-between
+}
+
+.advantages__item {
+    width: 370px;
+    background: #FFF;
+    box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    padding-bottom: 65px;
 }
