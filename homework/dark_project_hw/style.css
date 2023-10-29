@@ -390,6 +390,10 @@ img {
         width: 100%;
     }
 
+    .info, .about__store2 {
+        order: 1;
+    }
+
     .footer__info, .about__store {
         text-align: left;
     }
