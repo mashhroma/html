@@ -517,9 +517,10 @@ img {
         grid-template-columns: repeat(1, 359px);
     }
 
-    /* .subscribe__block {
+    .subscribe__block {
         background-image: url(./img/bg375_subscribe.png);
-    } */
+        background-size: 100%;
+    }
 
     .footer {
         padding-top: 43px;
