@@ -1,0 +1,15 @@
+$colorSelectSite: #F16D7F;
+$widthSite: 1140px;
+
+.center {
+    padding-left: calc(50% - $widthSite / 2);
+}
+
+.top-head__heading {
+    color: $colorSelectSite;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
