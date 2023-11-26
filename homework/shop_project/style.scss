@@ -17,6 +17,29 @@ img {
     max-width: 100%;
 }
 
+.button {
+    text-align: center;
+    border: $borderButton;
+    padding: 15px 40px;
+    color: $titleColor;
+    background-color: #FFF;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    color: $textColorLight;
+    background-color: $hoverBackground;
+}
+
+.button:hover path {
+    fill: $textColorLight;
+}
+
 .center {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
@@ -40,9 +63,9 @@ img {
     display: flex;
     align-items: baseline;
 
-
     &__pop-up {
         position: relative;
+        z-index: 100;
     }
 
     &__pop-up>summary {
@@ -237,24 +260,6 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-    }
-
-    &__button {
-        text-align: center;
-        border: $borderButton;
-        padding: 15px 40px;
-        color: $titleColor;
-        font-family: Lato;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        transition: all 0.3s;
-    }
-
-    &__button:hover {
-        color: $textColorLight;
-        background-color: $hoverBackground;
     }
 }
 
@@ -489,6 +494,181 @@ img {
         fill: #FFFFFF;
     }
 }
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F3F4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
+    &__title {
+        color: $titleColor;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.breadcrumbs {
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__li:not(:last-child)::after {
+        content: '/';
+        padding-left: 8px;
+        padding-right: 8px;
+        color: $linkColor;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__link {
+        color: $linkColor;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__li:last-child a {
+        color: $titleColor;
+        font-weight: 700;
+    }
+}
+
+.photos {
+    position: relative;
+    background-color: #F7F7F7;
+    padding-top: 11px;
+    padding-bottom: 15px;
+    text-align: center;
+    border: solid 1px #EAEAEA;
+
+    %arrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 47px;
+        background-color: #bdb6b6;
+        top: 50%;
+    }
+
+    .left {
+        @extend %arrow;
+        left: 0px;
+    }
+
+    .right {
+        @extend %arrow;
+        right: 0px;
+    }
+
+    a:hover path {
+        fill: #F16D7F;
+    }
+}
+
+.info-block {
+    transform: translateY(-50px);
+    border: solid 1px #EAEAEA;
+    background-color: white;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    width: 641px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12.1px;
+    }
+
+    &__subtitle {
+        color: #F16D7F;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__title {
+        color: #4D4D4D;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__text {
+        color: #5E5E5E;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        padding-left: 41.5px;
+        padding-right: 44.5px;
+        padding-bottom: 32px;
+    }
+
+    &__price {
+        color: #EF5B70;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    hr {
+        border: solid 1px #EAEAEA;
+        margin-top: 65px;
+        margin-bottom: 65px;
+    }
+
+    &__select {
+        display: flex;
+        justify-content: center;
+        gap: 23px;
+    }
+
+    &__select-item {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #6F6E6E;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+    }
+}
+
 
 @media (max-width: 1150px) {
     .center {

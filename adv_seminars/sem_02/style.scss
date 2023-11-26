@@ -1,0 +1,13 @@
+summary {
+    list-style: "\2192";
+    cursor: pointer;
+}
+
+details {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+details[open] summary {
+    list-style: "\2193";
+}

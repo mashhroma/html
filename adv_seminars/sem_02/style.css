@@ -1,0 +1,14 @@
+@charset "UTF-8";
+summary {
+  list-style: "→";
+  cursor: pointer;
+}
+
+details {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+details[open] summary {
+  list-style: "↓";
+}/*# sourceMappingURL=style.css.map */
