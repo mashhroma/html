@@ -1,0 +1,160 @@
+@media (max-width: 1150px) {
+    .center {
+        padding-left: calc(50% - 512px);
+        padding-right: calc(50% - 512px);
+    }
+
+    .offers {
+        grid-template-columns: repeat(3, 320px);
+
+        &__offer .accesories {
+            width: 1024px;
+        }
+    }
+
+    .products {
+        grid-template-columns: repeat(3, 320px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+    }
+
+    .top {
+        &__title {
+            font-size: 44px;
+            font-style: normal;
+        }
+
+        &__title-small {
+            color: #222;
+            font-size: 24px;
+        }
+    }
+
+    .offers {
+        margin-bottom: 110px;
+        grid-template-columns: repeat(3, 232px);
+        gap: 20px;
+
+        &__offer {
+            height: 167.617px;
+        }
+
+        .accesories {
+            width: 734.581px;
+            height: 116.043px
+        }
+    }
+
+    .products {
+        margin-top: 74px;
+        margin-bottom: 33px;
+        grid-template-columns: repeat(2, 360px);
+        gap: 16px;
+    }
+
+    .features {
+        flex-wrap: wrap;
+    }
+
+    .subscr {
+        background-image: url(./img/bg768_subscribe.png);
+        gap: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .logo {
+        width: 38px;
+    }
+
+    .search {
+        width: 26px;
+    }
+
+    .menu {
+        &__lk {
+            display: none;
+        }
+
+        &__basket {
+            display: none;
+        }
+    }
+
+    .top {
+        padding-top: 149px;
+        padding-bottom: 149px;
+
+        img {
+            display: none;
+        }
+
+        .svg__line {
+            width: 12px;
+            height: 63px;
+        }
+
+        &__right {
+            justify-content: center;
+        }
+
+        &__title {
+            font-size: 38px;
+        }
+
+        &__title-small {
+            font-size: 20px;
+        }
+    }
+
+    .half {
+        width: 100%;
+    }
+
+    .offers {
+        margin-bottom: 64px;
+        grid-template-columns: repeat(1, 343px);
+        gap: 32px;
+
+        &__offer {
+            height: 247px;
+        }
+
+        .accesories {
+            width: 343.262px;
+            height: 111px;
+        }
+    }
+
+    .products {
+        margin-top: 65px;
+        margin-bottom: 40px;
+        grid-template-columns: repeat(1, 359px);
+    }
+
+    .subscr {
+        background-image: url(./img/bg375_subscribe.png);
+        background-size: 100%;
+
+        &__input {
+            width: 180px;
+        }
+    }
+
+    .footer {
+        padding-top: 43px;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+}
