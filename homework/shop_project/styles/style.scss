@@ -18,6 +18,10 @@ img {
     max-width: 100%;
 }
 
+.box-content {
+    overflow: hidden;
+}
+
 .center {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
@@ -47,6 +51,7 @@ img {
 }
 
 .header {
+    position: relative;
     background-color: $backgroundDark;
     min-height: 75px;
     display: flex;
@@ -66,15 +71,6 @@ img {
 
     &:hover {
         cursor: pointer
-    }
-
-    &__pop-up {
-        position: relative;
-        z-index: 100;
-    }
-
-    &__pop-up>summary {
-        list-style-image: url("./img/header_menu_mobile.svg");
     }
 
     &__lk {
@@ -115,15 +111,37 @@ img {
 }
 
 .hamburger {
-    top: 46px;
-    right: 0px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-    width: 150px;
-    background: #FFF;
-    padding: 32px;
+    z-index: 100;
+
+    &__pop-up {
+        width: 150px;
+        background: #FFF;
+        padding: 32px;
+        position: absolute;
+        top: 76px;
+        right: -232px;
+        transition: transform 1s;
+    }
+
+    &__nav {
+        list-style-type: none;
+    }
+
+    &__nav li {
+        padding-bottom: 11px;
+    }
+
+    &__nav li:first-of-type {
+        padding-top: 11px;
+    }
+
+    #hamburger-link {
+        visibility: hidden;
+
+        &:checked~.hamburger__pop-up {
+            transform: translateX(-232px);
+        }
+    }
 
     &__title {
         color: $textColorDark;
@@ -131,6 +149,7 @@ img {
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        padding-bottom: 24px;
     }
 
     &__subtitle {
@@ -142,6 +161,7 @@ img {
     }
 
     &__link {
+        display: block;
         padding-left: 21.5px;
         color: $textColor;
         font-size: 14px;

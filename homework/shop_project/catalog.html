@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<div class="box-content">
     <header class="header center">
         <div class="header__left">
             <a href="index.html"><img src="./img/logo.svg" alt="logo" class="logo"></a>
@@ -20,35 +21,46 @@
             </div>
         </div>
         <nav class="menu">
-            <details class="menu__pop-up">
-                <summary></summary>
-                <div class="hamburger">
+            <div class="hamburger">
+                <input type="checkbox" id="hamburger-link">
+                <label for="hamburger-link">
+                    <svg width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z"
+                            fill="#E8E8E8" />
+                    </svg>
+                </label>
+                <div class="hamburger__pop-up">
                     <h3 class="hamburger__title">MENU</h3>
                     <a href="catalog.html" class="hamburger__subtitle">MAN</a>
-                    <a href="catalog.html" class="hamburger__link">Accessories</a>
-                    <a href="catalog.html" class="hamburger__link">Bags</a>
-                    <a href="catalog.html" class="hamburger__link">Denim</a>
-                    <a href="catalog.html" class="hamburger__link">T-Shirts</a>
+                    <ul class="hamburger__nav">
+                        <li><a href="catalog.html" class="hamburger__link">Accessories</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Bags</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Denim</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">T-Shirts</a></li>
+                    </ul>
                     <a href="catalog.html" class="hamburger__subtitle">WOMAN</a>
-                    <a href="catalog.html" class="hamburger__link">Accessories</a>
-                    <a href="catalog.html" class="hamburger__link">Jackets & Coats</a>
-                    <a href="catalog.html" class="hamburger__link">Polos</a>
-                    <a href="catalog.html" class="hamburger__link">T-Shirts</a>
-                    <a href="catalog.html" class="hamburger__link">Shirts</a>
+                    <ul class="hamburger__nav">
+                        <li><a href="catalog.html" class="hamburger__link">Accessories</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Jackets & Coats</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Polos</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">T-Shirts</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Shirts</a></li>
+                    </ul>
                     <a href="catalog.html" class="hamburger__subtitle">KIDS</a>
-                    <a href="catalog.html" class="hamburger__link">Accessories</a>
-                    <a href="catalog.html" class="hamburger__link">Jackets & Coats</a>
-                    <a href="catalog.html" class="hamburger__link">Polos</a>
-                    <a href="catalog.html" class="hamburger__link">T-Shirts</a>
-                    <a href="catalog.html" class="hamburger__link">Shirts</a>
-                    <a href="catalog.html" class="hamburger__link">Bags</a>
+                    <ul class="hamburger__nav">
+                        <li><a href="catalog.html" class="hamburger__link">Accessories</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Jackets & Coats</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Polos</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">T-Shirts</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Shirts</a></li>
+                        <li><a href="catalog.html" class="hamburger__link">Bags</a></li>
+                    </ul>
                 </div>
-            </details>
+            </div>
             <img class="menu__lk" src="./img/menu__lk.svg" alt="menu lk">
             <a class="menu__basket five__goods" href="cart.html"><img src="./img/menu__basket.svg" alt="basket"></a>
         </nav>
     </header>
-
     <section class="heading center">
         <h1 class="heading__title">NEW ARRIVALS </h1>
 
@@ -60,7 +72,6 @@
             </ul>
         </nav>
     </section>
-
     <main class="catalog center">
         <section class="filter-box">
             <div class="filter-box__left">
@@ -382,7 +393,6 @@
 
         </div>
     </main>
-
     <section class="features center">
         <div class="features__item">
             <div class="features__form"><img src="./img/forma_1.svg" alt="Free Delivery"></div>
@@ -476,6 +486,7 @@
             </a>
         </div>
     </footer>
+</div>
 </body>
 
 </html>
