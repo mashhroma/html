@@ -941,6 +941,13 @@ img {
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+        transition: all .3s;
+    }
+
+    &__button:hover {
+        border-color: $hoverBackground;
+        background-color: $hoverBackground;
+        color: $textColorLight;
     }
 }
 
@@ -952,6 +959,11 @@ img {
 
     &>&__item {
         display: flex;
+        border: $borderBlock;
+        transition: all .3s;
+    }
+
+    &__item:hover {
         box-shadow: 10px 10px 20px #d3cdcd;
     }
 
@@ -981,6 +993,15 @@ img {
         font-weight: 400;
         line-height: normal;
         margin-bottom: 42px;
+
+        & svg {
+            display: block;
+            padding: 2px;
+        }
+
+        & svg:hover path {
+            fill: $titleColor;
+        }
     }
 
     &__text {
@@ -1041,6 +1062,10 @@ img {
         margin-bottom: 21px;
     }
 
+    &__input::placeholder {
+        color: #B1B1B1;
+    }
+
     &__button {
         width: fit-content;
         border: $borderThick;
@@ -1052,6 +1077,14 @@ img {
         font-weight: 300;
         line-height: normal;
         padding: 10px 15px;
+        transition: all .3s;
+    }
+
+    &__button:hover {
+        border-color: $hoverBackground;
+        background-color: $hoverBackground;
+        color: $textColorLight;
+        cursor: pointer;
     }
 }
 
@@ -1105,5 +1138,9 @@ img {
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+    }
+
+    &__button:hover {
+        cursor: pointer
     }
 }

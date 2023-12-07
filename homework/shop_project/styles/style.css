@@ -957,6 +957,12 @@ img {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  transition: all 0.3s;
+}
+.basket__button:hover {
+  border-color: #F16D7F;
+  background-color: #F16D7F;
+  color: #FFF;
 }
 
 .goods {
@@ -967,6 +973,10 @@ img {
 }
 .goods > .goods__item {
   display: flex;
+  border: solid 1px #EAEAEA;
+  transition: all 0.3s;
+}
+.goods__item:hover {
   box-shadow: 10px 10px 20px #d3cdcd;
 }
 .goods__photo {
@@ -992,6 +1002,13 @@ img {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 42px;
+}
+.goods__title svg {
+  display: block;
+  padding: 2px;
+}
+.goods__title svg:hover path {
+  fill: #F16D7F;
 }
 .goods__text {
   color: #575757;
@@ -1044,6 +1061,12 @@ img {
   line-height: normal;
   margin-bottom: 21px;
 }
+.registration__input::-moz-placeholder {
+  color: #B1B1B1;
+}
+.registration__input::placeholder {
+  color: #B1B1B1;
+}
 .registration__button {
   width: -moz-fit-content;
   width: fit-content;
@@ -1056,6 +1079,13 @@ img {
   font-weight: 300;
   line-height: normal;
   padding: 10px 15px;
+  transition: all 0.3s;
+}
+.registration__button:hover {
+  border-color: #F16D7F;
+  background-color: #F16D7F;
+  color: #FFF;
+  cursor: pointer;
 }
 
 .total {
@@ -1105,4 +1135,7 @@ img {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+.total__button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
