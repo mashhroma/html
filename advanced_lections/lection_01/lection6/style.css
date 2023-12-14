@@ -1,0 +1,107 @@
+@keyframes duck-fly-1 {
+  0% {
+    left: -75px;
+    top: 59vh;
+  }
+  50% {
+    left: 9vw;
+    top: 85vh;
+  }
+  100% {
+    left: 100vw;
+    top: 19vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    left: -75px;
+    top: 15vh;
+  }
+  50% {
+    left: 56vw;
+    top: 53vh;
+  }
+  100% {
+    left: 100vw;
+    top: 8vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    left: -75px;
+    top: 31vh;
+  }
+  50% {
+    left: 52vw;
+    top: 85vh;
+  }
+  100% {
+    left: 100vw;
+    top: 20vh;
+  }
+}
+@keyframes duck-fly-4 {
+  0% {
+    left: -75px;
+    top: 68vh;
+  }
+  50% {
+    left: 36vw;
+    top: 19vh;
+  }
+  100% {
+    left: 100vw;
+    top: 70vh;
+  }
+}
+body {
+  counter-reset: count;
+  height: 100vh;
+  margin: 0;
+  background-image: url(https://static.carthrottle.com/workspace/uploads/profile/ad5e8efbb66e36e88e35472d651d8a1b.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.duck {
+  position: absolute;
+}
+.duck__image {
+  width: 75px;
+  transform: scale(-1, 1);
+}
+.duck_1 {
+  animation: duck-fly-1 20s ease-in 1s both;
+}
+.duck_2 {
+  animation: duck-fly-2 20s ease-in 2s both;
+}
+.duck_3 {
+  animation: duck-fly-3 20s ease-in 3s both;
+}
+.duck_4 {
+  animation: duck-fly-4 20s ease-in 4s both;
+}
+
+.duck-check {
+  position: absolute;
+  visibility: hidden;
+}
+.duck-check:checked {
+  counter-increment: count;
+}
+.duck-check:checked ~ label {
+  display: none;
+}
+
+.counter-info {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+}
+.counter-info::before {
+  content: counter(count);
+}/*# sourceMappingURL=style.css.map */

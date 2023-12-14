@@ -1,0 +1,73 @@
+$widthDuck: 75px;
+$countDuck: 4;
+
+@for $i from 1 through $countDuck {
+    @keyframes duck-fly-#{$i} {
+        0% {
+            left: -$widthDuck;
+            top: random(90) + vh;
+        }
+
+        50% {
+            left: random(60) + vw;
+            top: random(90) + vh;
+        }
+
+        100% {
+            left: 100vw;
+            top: random(90) + vh;
+        }
+    }
+}
+
+body {
+    counter-reset: count;
+    height: 100vh;
+    margin: 0;
+    background-image: url(https://static.carthrottle.com/workspace/uploads/profile/ad5e8efbb66e36e88e35472d651d8a1b.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.duck {
+    position: absolute;
+
+    &__image {
+        width: $widthDuck;
+        transform: scale(-1, 1)
+    }
+
+    @for $i from 1 through $countDuck {
+        &_#{$i} {
+            animation: duck-fly-#{$i} 20s ease-in #{$i}s both;
+        }
+    }
+
+}
+
+.duck-check {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked {
+        counter-increment: count;
+    }
+
+    &:checked~label {
+        display: none;
+    }
+}
+
+
+.counter-info {
+    position: absolute;
+    top: 14px;
+    right: 24px;
+
+    &::before {
+        content: counter(count);
+    }
+}
