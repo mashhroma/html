@@ -57,16 +57,21 @@ img {
     justify-content: space-between;
     align-items: center;
 
-    &__left {
+    &__logo {
         display: flex;
         gap: 40px;
         align-items: baseline;
+    }
+
+    &__search:hover path {
+        fill: $titleColor;
     }
 }
 
 .menu {
     display: flex;
     align-items: baseline;
+    gap: 33px;
 
     &:hover {
         cursor: pointer
@@ -87,6 +92,10 @@ img {
 
     &__basket img {
         height: 29px;
+    }
+
+    &__link:hover path {
+        fill: $titleColor;
     }
 
     .five__goods::after {
@@ -244,6 +253,12 @@ img {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        transition: filter 1s;
+
+        &:hover {
+            box-shadow: 10px 10px 20px #d3cdcd;
+            filter: brightness(60%);
+        }
     }
 
     & .women {
@@ -301,26 +316,31 @@ img {
 
     &__link {
         background-color: #F8F8F8;
-        position: relative;
         height: 581px;
         text-align: left;
         transition: all 1s;
+        display: flex;
+        flex-direction: column;
+
+        & .main-img {
+            transition: all 1s;
+        }
+
+        &:hover {
+            box-shadow: 10px 10px 20px #d3cdcd;
+        }
     }
 
-    &__link .main-img {
-        transition: all 1s;
-    }
+    &__item {
+        position: relative;
 
-    &__link:hover {
-        box-shadow: 10px 10px 20px #d3cdcd;
-    }
+        &:hover .main-img {
+            filter: brightness(40%);
+        }
 
-    &__link:hover .main-img {
-        filter: brightness(40%);
-    }
-
-    &__link:hover &__add-to-cart {
-        visibility: visible;
+        &:hover .products__add-to-cart {
+            visibility: visible;
+        }
     }
 
     &__add-to-cart {
@@ -338,15 +358,19 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-    }
 
-    &__add-to-cart:hover {
-        border-color: $titleColor;
-        color: $titleColor;
-    }
+        &:hover {
+            border-color: $titleColor;
+            color: $titleColor;
+        }
 
-    &__add-to-cart:hover path {
-        fill: $titleColor;
+        &:hover &__link {
+            pointer-events: all;
+        }
+
+        &:hover path {
+            fill: $titleColor;
+        }
     }
 
     &__description {
@@ -430,7 +454,7 @@ img {
     background-image: url(../img/bg_subscribe.jpg);
     background-position: bottom;
     background-size: cover;
-    background-repeat: round;
+    background-repeat: no-repeat;
     flex-wrap: wrap;
 
     &__content {
@@ -493,7 +517,7 @@ img {
         height: 49px;
         flex-shrink: 0;
         background-color: $basketBackground;
-        border: 0;
+        border: $borderBlock;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         color: $textColorLight;
@@ -503,24 +527,31 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        transition: all 1s;
+
+        &:hover {
+            background-color: #FFF;
+            color: $titleColor;
+            border: $borderButton;
+        }
     }
 }
 
-.footer {
+.copyright {
     display: flex;
     justify-content: space-between;
     background-color: $backgroundDark;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 23px;
-}
 
-.copyright {
-    color: $textColorLight;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    &__info {
+        color: $textColorLight;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 .social {
@@ -570,15 +601,26 @@ img {
         display: flex;
     }
 
-    &__li:not(:last-child)::after {
-        content: '/';
-        padding-left: 8px;
-        padding-right: 8px;
-        color: $linkColor;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+    &__li {
+        &:hover a {
+            color: $titleColor;
+        }
+
+        &:not(:last-child)::after {
+            content: '/';
+            padding-left: 8px;
+            padding-right: 8px;
+            color: $linkColor;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &:last-child a {
+            color: $titleColor;
+            font-weight: 700;
+        }
     }
 
     &__link {
@@ -587,11 +629,6 @@ img {
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-    }
-
-    &__li:last-child a {
-        color: $titleColor;
-        font-weight: 700;
     }
 }
 
@@ -642,9 +679,6 @@ img {
 
 .info {
     width: 641px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
     align-items: center;
     text-align: center;
 
@@ -669,6 +703,7 @@ img {
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+        padding-bottom: 48px;
     }
 
     &__text {
@@ -698,22 +733,13 @@ img {
 
     &__select {
         display: flex;
-        justify-content: center;
-        gap: 23px;
-    }
-
-    &__select-item {
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 9px;
-        color: #6F6E6E;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
     }
 
     &__button {
+        width: fit-content;
+        margin-top: 48px;
         display: flex;
         align-items: center;
         gap: 23px;
@@ -723,8 +749,9 @@ img {
 .filter-box {
     margin-top: 51px;
     display: flex;
-    align-items: center;
-    gap: 100px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 90px;
 
     & summary {
         list-style-type: none;
@@ -771,6 +798,14 @@ img {
         line-height: normal;
         color: #000;
         font-weight: 600;
+
+        &:hover {
+            color: $titleColor;
+
+            path {
+                fill: $titleColor;
+            }
+        }
     }
 
     &__catalog {
@@ -838,6 +873,15 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        &:hover {
+            color: $titleColor;
+            cursor: pointer;
+
+            path {
+                fill: $titleColor;
+            }
+        }
     }
 
     &__list {
@@ -854,6 +898,7 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        width: fit-content;
     }
 
     &__check {
@@ -873,7 +918,6 @@ img {
     &__list {
         list-style-type: none;
         width: fit-content;
-        // align-items: baseline;
         display: flex;
         padding-left: 15px;
         padding-right: 15px;
@@ -921,14 +965,13 @@ img {
 
 .cart {
     display: flex;
-    gap: 128px;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 96px;
     margin-bottom: 128px;
 }
 
 .basket {
-    width: 65%;
-
     &__buttons {
         display: flex;
         justify-content: space-between;
@@ -960,9 +1003,16 @@ img {
     margin-bottom: 72px;
 
     &>&__item {
-        display: flex;
         border: $borderBlock;
         transition: all .3s;
+    }
+
+    &__link {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
     }
 
     &__item:hover {
@@ -970,40 +1020,40 @@ img {
     }
 
     &__photo {
-        min-width: 40%;
-    }
+        width: 262px;
 
-    &__photo img {
-        height: 100%;
+        & img {
+            height: 100%;
+        }
     }
 
     &__content {
+        min-width: 300px;
         padding-top: 22px;
         padding-right: 22px;
         padding-left: 32px;
         padding-bottom: 26px;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        top: 28px;
+        right: 22px;
+
+        &:hover path {
+            fill: $titleColor;
+        }
+
     }
 
     &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 120px;
         color: #222;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         margin-bottom: 42px;
-
-        & svg {
-            display: block;
-            padding: 2px;
-        }
-
-        & svg:hover path {
-            fill: $titleColor;
-        }
     }
 
     &__text {
@@ -1013,15 +1063,22 @@ img {
         font-weight: 400;
         line-height: normal;
         margin-bottom: 6px;
+    }
 
-        &_flex {
-            display: flex;
-            gap: 24px;
-        }
+    &__input {
+        position: absolute;
+        bottom: 60px;
+        left: 380px;
+        max-width: 26px;
+        margin-left: 24px;
+        padding-left: 16px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border: $borderBlock;
+        outline: none;
 
-        &_right {
-            padding: 0 1em 0 1em;
-            border: $borderBlock;
+        &:hover {
+            pointer-events: all;
         }
     }
 
@@ -1031,10 +1088,13 @@ img {
 }
 
 .order {
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
     &__registration {
-        margin-bottom: 57px;
+        width: 360px;
+        margin-bottom: 65px;
     }
 
     &__title {
@@ -1062,6 +1122,7 @@ img {
         font-weight: 300;
         line-height: normal;
         margin-bottom: 21px;
+        outline: none;
     }
 
     &__input::placeholder {
@@ -1096,6 +1157,7 @@ img {
     flex-direction: column;
     text-align: end;
     padding: 39px 34px 42px 44px;
+    height: fit-content;
 
     &__item {
         color: #4A4A4A;
@@ -1129,20 +1191,24 @@ img {
     }
 
     &__button {
-        width: fit-content;
-        padding: 15px 43px;
+        width: 273px;
+        padding: 15px 40px;
         margin-top: 17px;
         background-color: $basketBackground;
-        border: none;
+        border: $borderButton;
         color: #FFF;
         font-family: Lato;
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+        transition: all .3s;
     }
 
     &__button:hover {
+        border: $borderButton;
+        background-color: #FFF;
+        color: $titleColor;
         cursor: pointer
     }
 }
@@ -1151,7 +1217,8 @@ img {
     margin-top: 64px;
     margin-bottom: 96px;
     display: flex;
-    gap: 128px;
+    // flex-wrap: wrap;
+    justify-content: space-between;
 
     &__form {
         display: flex;
@@ -1168,6 +1235,7 @@ img {
     }
 
     &__input {
+        width: 360px;
         border: $borderThick;
         color: #222;
         font-family: Lato;
@@ -1211,6 +1279,7 @@ img {
     }
 
     &__subtext {
+        width: 360px;
         color: #B1B1B1;
         font-size: 13px;
         font-style: normal;
@@ -1245,6 +1314,11 @@ img {
 
     &__button:hover path {
         fill: $titleColor;
+    }
+
+    &__content {
+        max-width: 650px;
+        padding-left: 22px;
     }
 
     &__title {
