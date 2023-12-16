@@ -176,10 +176,15 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-    }
 
-    &__link:hover {
-        color: $titleColor;
+        &:hover {
+            color: $titleColor;
+        }
+
+        &_hiddenLink {
+            display: none;
+            padding-bottom: 15px;
+        }
     }
 }
 
@@ -452,7 +457,7 @@ img {
     padding-top: 97px;
     padding-bottom: 156px;
     background-image: url(../img/bg_subscribe.jpg);
-    background-position: bottom;
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
     flex-wrap: wrap;
@@ -540,6 +545,7 @@ img {
 .copyright {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
     background-color: $backgroundDark;
     align-items: center;
     padding-top: 24px;
@@ -579,6 +585,7 @@ img {
 
 .heading {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #F8F3F4;
@@ -670,16 +677,17 @@ img {
     transform: translateY(-50px);
     border: $borderBlock;
     background-color: white;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding: 65px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .info {
-    width: 641px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 641px;
     text-align: center;
 
     &__heading {
@@ -718,16 +726,14 @@ img {
     }
 
     &__price {
+        width: 100%;
         color: #EF5B70;
         font-size: 24px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-    }
-
-    hr {
-        border: $borderBlock;
-        margin-top: 65px;
+        border-bottom: $borderBlock;
+        padding-bottom: 65px;
         margin-bottom: 65px;
     }
 
@@ -1029,9 +1035,9 @@ img {
 
     &__content {
         min-width: 300px;
-        padding-top: 22px;
-        padding-right: 22px;
-        padding-left: 32px;
+        padding-top: 13px;
+        padding-right: 13px;
+        padding-left: 17px;
         padding-bottom: 26px;
         position: relative;
     }
@@ -1067,8 +1073,8 @@ img {
 
     &__input {
         position: absolute;
-        bottom: 60px;
-        left: 380px;
+        bottom: 67px;
+        left: 370px;
         max-width: 26px;
         margin-left: 24px;
         padding-left: 16px;
@@ -1091,6 +1097,7 @@ img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: max-content;
 
     &__registration {
         width: 360px;
@@ -1217,7 +1224,6 @@ img {
     margin-top: 64px;
     margin-bottom: 96px;
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
 
     &__form {
@@ -1235,6 +1241,7 @@ img {
     }
 
     &__input {
+        box-sizing: border-box;
         width: 360px;
         border: $borderThick;
         color: #222;
@@ -1245,6 +1252,7 @@ img {
         line-height: normal;
         margin-top: 21px;
         padding: 13px 17px;
+        outline: none;
     }
 
     &__input::placeholder {

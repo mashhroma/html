@@ -68,18 +68,17 @@
     }
 
     .subscr {
+        background-position: -400px;
         gap: 48px;
+    }
+
+    .filter-box {
+        gap: 60px;
     }
 
     .cart {
         justify-content: center;
         gap: 64px;
-    }
-
-    .goods {
-        &__content {
-            width: 472px;
-        }
     }
 
     .order {
@@ -103,13 +102,15 @@
         width: 26px;
     }
 
-    .menu {
-        &__lk {
-            display: none;
-        }
+    .menu>a {
+        display: none;
+    }
 
-        &__basket {
-            display: none;
+    .hamburger {
+        &__link {
+            &_hiddenLink {
+                display: block;
+            }
         }
     }
 
@@ -161,22 +162,25 @@
     .products {
         margin-top: 65px;
         margin-bottom: 40px;
-        grid-template-columns: repeat(1, 359px);
+        grid-template-columns: repeat(1, 343px);
     }
 
     .subscr {
-        // background-image: url(./img/bg375_subscribe.png);
-        // background-size: 100%;
+        background-position: -500px;
 
         &__input {
             width: 180px;
         }
     }
 
-    .footer {
-        padding-top: 43px;
-        flex-wrap: wrap;
+    .copyright {
+        gap: 25px;
         justify-content: center;
+    }
+
+    .heading {
+        justify-content: center;
+        gap: 32px;
     }
 
     .catalog {
@@ -211,8 +215,115 @@
     }
 
     .sort {
+        gap: 23px;
+
         &__summary {
             font-size: 12px;
+
+            &_small {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .info {
+        width: fit-content;
+
+        &__price {
+            padding-bottom: 31px;
+            margin-bottom: 49px;
+            width: 175px;
+        }
+    }
+
+    .cart {
+        margin-top: 39px;
+        margin-bottom: 96px;
+    }
+
+    .basket {
+        &__button {
+            padding: 9px 17px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+
+    .goods {
+        gap: 32px;
+        margin-bottom: 30px;
+
+        &__photo {
+            width: 143px;
+        }
+
+        &__content {
+            min-width: 214px;
+            max-width: 214px;
+        }
+
+        &__title {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        &__close {
+            top: 10px;
+            right: 13px;
+
+            & svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &__input {
+            font-size: 10px;
+            bottom: 30px;
+            left: 210px;
+            max-width: 24px;
+            padding-left: 13px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+    }
+
+    .order {
+        justify-content: center;
+
+        &__registration {
+            width: 100%;
+            margin-bottom: 65px;
+        }
+    }
+
+    .total {
+        width: 100%;
+    }
+
+    .registration {
+        margin-top: 40px;
+        margin-bottom: 100px;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+
+        &__form {
+            width: fit-content;
+        }
+
+        &__input,
+        &__subtext {
+            width: 350px;
+        }
+
+        &__content {
+            padding-left: 0px;
         }
     }
 }
